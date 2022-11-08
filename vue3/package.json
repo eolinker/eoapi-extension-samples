@@ -1,10 +1,11 @@
 {
-  "name": "eoapi-extension-vue3-demo",
+  "name": "eoapi-extension-samples-vue3",
   "version": "0.1.1",
-  "title": "eoapi-extension-vue3-demo",
+  "title": "eoapi-extension-samples-vue3",
   "description": "vue3测试用的插件~",
   "author": "eoapi",
-  "main": "dist/index.js",
+  "main": "browser/index.js",
+  "node": "node/index.js",
   "logo": "https://vite-vue3-admin.vercel.app/assets/logo.3503d5cd.png",
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -12,36 +13,36 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "core-js": "^3.26.0",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.13",
-    "@vue/cli-plugin-router": "^4.5.0",
-    "@vue/cli-plugin-typescript": "^4.5.0",
-    "@vue/cli-service": "4.5.10",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/compiler-sfc": "^3.2.41",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.27.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^7.0.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "typescript": "^4.1.5"
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "sass": "^1.56.0",
+    "sass-loader": "^13.1.0",
+    "typescript": "^4.8.4"
   },
   "features": {
     "sidebarView": {
-      "icon": "./favicon.ico",
+      "icon": "international",
       "title": "vue3",
-      "main": "./page/index.html",
+      "url": "./page/index.html",
       "debugUrl": "http://localhost:4009"
     },
     "i18n": {
@@ -56,6 +57,35 @@
         "url": "./page/index.html",
         "debugUrl": "http://localhost:4009"
       }
-    ]
+    ],
+    "apiPreviewTab": {
+      "rightExtra": [
+        {
+          "name": "API Sercurity Check",
+          "icon": "international",
+          "tooltip": "扫描API敏感词",
+          "tooltipTrigger": "hover",
+          "events": [
+            {
+              "name": "click",
+              "handler": "sercurityCheck"
+            }
+          ]
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "API Sercurity",
+      "properties": {
+        "serverUrl": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "label": "OpenDLP服务地址",
+          "description": "部署OpenDLP服务后得到的地址"
+        }
+      }
+    }
   }
 }
