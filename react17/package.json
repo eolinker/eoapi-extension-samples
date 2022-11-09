@@ -1,7 +1,10 @@
 {
-  "name": "child-react17",
+  "name": "eoapi-extension-samples-react17",
   "version": "0.1.0",
   "private": true,
+  "title": "eoapi-extension-samples-react17",
+  "description": "react17测试用的插件~",
+  "logo": "https://reactjs.org/favicon.ico",
   "scripts": {
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -154,5 +157,13 @@
     "presets": [
       "react-app"
     ]
+  },
+  "features": {
+    "sidebarView": {
+      "icon": "folder-open",
+      "title": "react17",
+      "url": "./page/index.html",
+      "debugUrl": "http://localhost:4005"
+    }
   }
 }

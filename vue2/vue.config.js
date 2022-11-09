@@ -1,6 +1,6 @@
 module.exports = {
-  outputDir: 'vue2',
-  publicPath: '/child/vue2/',
+  outputDir: "vue2",
+  publicPath: "/",
   productionSourceMap: false,
   devServer: {
     hot: false,
@@ -12,12 +12,10 @@ module.exports = {
       errors: true,
     },
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Origin": "*",
     },
   },
   lintOnSave: false,
   // 自定义webpack配置
-  configureWebpack: {
-
-  },
-}
+  configureWebpack: {},
+};

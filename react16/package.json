@@ -1,6 +1,9 @@
 {
-  "name": "child-react16",
+  "name": "eoapi-extension-samples-react16",
   "version": "0.1.0",
+  "title": "eoapi-extension-samples-react16",
+  "description": "react16测试用的插件~",
+  "logo": "https://reactjs.org/favicon.ico",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -148,5 +151,13 @@
     "presets": [
       "react-app"
     ]
+  },
+  "features": {
+    "sidebarView": {
+      "icon": "folder-open",
+      "title": "react16",
+      "url": "./page/index.html",
+      "debugUrl": "http://localhost:4004"
+    }
   }
 }
